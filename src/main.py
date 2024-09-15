@@ -133,10 +133,10 @@ def sync_folders(source_folder, replica_folder, dry_run, exclude_patterns):
 # Main function
 def main():
     parser = argparse.ArgumentParser(description="Synchronize source folder with replica folder.")
-    parser.add_argument("source", type=str, help="Source folder path")
-    parser.add_argument("replica", type=str, help="Replica folder path")
-    parser.add_argument("interval", type=int, help="Synchronization interval in seconds")
-    parser.add_argument("logfile", type=str, help="Log file path")
+    parser.add_argument("--source", type=str, help="Source folder path")
+    parser.add_argument("--replica", type=str, help="Replica folder path")
+    parser.add_argument("--interval", type=int, help="Synchronization interval in seconds")
+    parser.add_argument("--logfile", type=str, help="Log file path")
     parser.add_argument("--dry-run", action="store_true", help="Simulate actions without making changes")
     parser.add_argument("--exclude", nargs="*", default=[], help="List of file patterns to exclude (e.g., *.tmp, .DS_Store)")
     parser.add_argument("--config", type=str, help="Path to JSON config file")
